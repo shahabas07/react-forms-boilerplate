@@ -43,7 +43,7 @@ const Forms = () => {
 
   return (
     <>
-      <form className="forms" onSubmit={validate}>
+      <form onSubmit={validate}>
         {sub && Object.keys(errors).length === 0 && (
           <p>Registration Successful!</p>
         )}
@@ -54,7 +54,7 @@ const Forms = () => {
           value={formVals.firstName}
           onChange={handleForm}
         />
-        <span className="error-text">{errors.firstName}</span>
+        <span className="error">{errors.firstName}</span>
 
         <input
           type="text"
@@ -63,7 +63,7 @@ const Forms = () => {
           value={formVals.lastName}
           onChange={handleForm}
         />
-        <span className="error-text">{errors.lastName}</span>
+        <span className="error">{errors.lastName}</span>
 
         <input
           type="tel"
@@ -72,7 +72,7 @@ const Forms = () => {
           value={formVals.phoneNo}
           onChange={handleForm}
         />
-        <span className="error-text">{errors.phoneNo}</span>
+        <span className="error">{errors.phoneNo}</span>
 
         <input
           type="email"
@@ -81,9 +81,9 @@ const Forms = () => {
           value={formVals.email}
           onChange={handleForm}
         />
-        <span className="error-text">{errors.email}</span>
+        <span className="error">{errors.email}</span>
 
-        <button type="submit" className="btn">
+        <button type="submit" >
           Register
         </button>
       </form>
