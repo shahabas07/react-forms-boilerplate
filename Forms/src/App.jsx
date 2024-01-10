@@ -43,7 +43,7 @@ const Forms = () => {
 
   return (
     <>
-      <form onSubmit={validate}>
+      <form  onSubmit={validate}>
         {sub && Object.keys(errors).length === 0 && (
           <p>Registration Successful!</p>
         )}
